@@ -1,14 +1,25 @@
 package com.codylab.parcel;
 
-class Dog {
+public class Dog {
 
-    private final String mName;
+    private String mName;
+    private String mOwner;
 
-    Dog(String name) {
+    public Dog(String name, String owner) {
         this.mName = name;
+        this.mOwner = owner;
+    }
+
+    public Dog(){
+        // For the subclasses that implement serializable SerializableDog class
+        // https://goo.gl/oxrKmj
     }
 
     public String getName() {
         return mName;
+    }
+
+    public String getOwnerName() {
+        return mOwner;
     }
 }

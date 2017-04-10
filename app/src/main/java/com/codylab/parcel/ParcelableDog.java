@@ -3,10 +3,7 @@ package com.codylab.parcel;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-public class ParcelableDog implements Parcelable {
-
-    private String mName;
-    private String mOwner;
+public class ParcelableDog extends Dog implements Parcelable {
 
     @Override
     public int describeContents() {
@@ -15,8 +12,8 @@ public class ParcelableDog implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel out, int flags) {
-        out.writeString(mName);
-        out.writeString(mOwner);
+        out.writeString(getName());
+        out.writeString(getOwnerName());
     }
 
     public static final Parcelable.Creator<ParcelableDog> CREATOR
@@ -31,20 +28,10 @@ public class ParcelableDog implements Parcelable {
     };
 
     public ParcelableDog(Parcel in) {
-        mName = in.readString();
-        mOwner = in.readString();
+        super(in.readString(), in.readString());
     }
 
-    public ParcelableDog(String name, String owner){
-        mName = name;
-        mOwner = owner;
-    }
-
-    public String getName() {
-        return mName;
-    }
-
-    public String getOwner() {
-        return mOwner;
+    public ParcelableDog(String name, String owner) {
+        super(name, owner);
     }
 }
