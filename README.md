@@ -4,8 +4,8 @@ A simple project to demonstrate how to pass an object between Android activities
 
 ## Screenshots
 
-![activity-1](https://i.imgur.com/3ZAm9ZK.png)
-![activity-2](https://i.imgur.com/AqsfNTh.png)
+![activity-1](https://i.imgur.com/3ZAm9ZKl.png)
+![activity-2](https://i.imgur.com/AqsfNThl.png)
 
 Passing an object from between activities needs some extra efforts, there are at least three ways to archive this goal:
 
